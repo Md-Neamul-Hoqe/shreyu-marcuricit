@@ -1,4 +1,6 @@
 import PageTitle from "../../components/PageTitle";
+import Analysis from "../../components/Tasks/attendance/analysis";
+import EmployeeTable from "../../components/Tasks/attendance/employeeTable";
 
 const AttendanceEmployee = () => {
   return (
@@ -14,6 +16,12 @@ const AttendanceEmployee = () => {
         ]}
         title={"Attendance"}
       />
+
+      {/* Analysis */}
+      <Analysis />
+
+      {/* Attendance */}
+      <EmployeeTable />
     </>
   );
 };

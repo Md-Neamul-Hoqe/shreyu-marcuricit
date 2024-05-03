@@ -1,6 +1,16 @@
 import { Col, Row } from "react-bootstrap";
 import Table from "../../Table";
-import { attendanceAdmin as data, days } from "../../../pages/tables/data";
+
+const data = [
+  {
+    id: 1,
+    date: "19 Feb 2023",
+    punch_in: "10 AM",
+    punch_out: "7 PM",
+    break: "1 hrs",
+    overtime: "3 hrs",
+  },
+];
 
 const EmployeeTable = () => {
   const columns = [
