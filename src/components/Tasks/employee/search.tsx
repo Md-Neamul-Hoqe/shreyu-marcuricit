@@ -11,8 +11,9 @@ const Search = () => {
           <Col lg={12}>
             <Form.Control
               type="text"
+              size="lg"
               id="employeeID"
-              defaultValue="Employee ID"
+              placeholder="Employee ID"
             />
           </Col>
         </Form.Group>
@@ -31,8 +32,9 @@ const Search = () => {
           <Col lg={12}>
             <Form.Control
               type="text"
+              size="lg"
               id="employeeName"
-              defaultValue="Employee Name"
+              placeholder="Employee Name"
             />
           </Col>
         </Form.Group>
@@ -47,8 +49,13 @@ const Search = () => {
           </Form.Select>
         </FloatingLabel>
       </Col>
-      <Col md={2} className="d-flex justify-content-end align-items-center">
-        <Button>Search</Button>
+      <Col
+        md={2}
+        className="d-flex justify-content-end align-items-start w-full"
+      >
+        <Button className="form-control" size="lg">
+          Search
+        </Button>
       </Col>
     </Row>
   );

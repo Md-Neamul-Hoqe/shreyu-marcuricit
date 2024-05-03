@@ -56,8 +56,8 @@ const UserBox = () => {
     <div className="user-box text-center">
       <img
         src={profileImg}
-        alt=""
-        title="Mat Helme"
+        alt="Md. Neamul Hoqe"
+        title="Md. Neamul Hoqe"
         className="rounded-circle avatar-md"
       />
       <Dropdown show={dropdownOpen} onToggle={toggleDropdown}>
@@ -67,7 +67,7 @@ const UserBox = () => {
           onClick={toggleDropdown}
           className="cursor-pointer text-dark h5 mt-2 mb-1 d-block"
         >
-          Nik Patel
+          Md. Neamul Hoqe
         </Dropdown.Toggle>
         <Dropdown.Menu className="user-pro-dropdown m-0">
           {/* <div onClick={toggleDropdown}> */}

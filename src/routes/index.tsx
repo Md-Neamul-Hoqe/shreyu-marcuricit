@@ -3,13 +3,10 @@ import { Navigate, Route, RouteProps } from "react-router-dom";
 
 // components
 import PrivateRoute from "./PrivateRoute";
-// import Employee from "../pages/tasks/Employee";
-// import Root from "./Root";
 
 // lazy load all the views
 
 // Employee Management
-// import AttendanceAdmin from "../pages/tasks/AttendanceAdmin";
 const LeavesSettingsPage = React.lazy(
   () => import("../pages/tasks/leavesSettings")
 );
@@ -140,6 +137,58 @@ const dashboardRoutes: RoutesProps = {
       path: "/dashboard/analytics",
       name: "Analytics",
       element: <AnalyticsDashboard />,
+      route: PrivateRoute,
+    },
+  ],
+};
+
+// Employees
+const Employees: RoutesProps = {
+  path: "/employees",
+  name: "Employees",
+  icon: "users",
+  header: "Custom",
+  children: [
+    {
+      path: "/employees/all-employees",
+      name: "All Employees",
+      element: <EmployeesPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/holidays",
+      name: "Holidays",
+      element: <HolidaysPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/leaves-admin",
+      name: "Leaves (Admin)",
+      element: <AdminLeavesPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/leaves-employee",
+      name: "Leaves (Employee)",
+      element: <EmployeeLeavesPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/leaves-settings",
+      name: "Leave Settings",
+      element: <LeavesSettingsPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/attendance-admin",
+      name: "Attendance Admin",
+      element: <AttendanceAdminPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/attendance-employee",
+      name: "Attendance Employee",
+      element: <AttendanceEmployeePage />,
       route: PrivateRoute,
     },
   ],
@@ -290,58 +339,6 @@ const extrapagesRoutes: RoutesProps = {
       path: "/pages/pricing",
       name: "Pricing",
       element: <Pricing />,
-      route: PrivateRoute,
-    },
-  ],
-};
-
-// Employees
-const Employees: RoutesProps = {
-  path: "/employees",
-  name: "Employees",
-  icon: "users",
-  header: "Custom",
-  children: [
-    {
-      path: "/employees/all-employees",
-      name: "All Employees",
-      element: <EmployeesPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/holidays",
-      name: "Holidays",
-      element: <HolidaysPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/leaves-admin",
-      name: "Leaves (Admin)",
-      element: <AdminLeavesPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/leaves-employee",
-      name: "Leaves (Employee)",
-      element: <EmployeeLeavesPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/leaves-settings",
-      name: "Leave Settings",
-      element: <LeavesSettingsPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/attendance-admin",
-      name: "Attendance Admin",
-      element: <AttendanceAdminPage />,
-      route: PrivateRoute,
-    },
-    {
-      path: "/employees/attendance-employee",
-      name: "Attendance Employee",
-      element: <AttendanceEmployeePage />,
       route: PrivateRoute,
     },
   ],
@@ -563,8 +560,8 @@ const flattenRoutes = (routes: RoutesProps[]) => {
 // All routes
 const authProtectedRoutes = [
   dashboardRoutes,
-  ...appRoutes,
   Employees,
+  ...appRoutes,
   extrapagesRoutes,
   uiRoutes,
 ];

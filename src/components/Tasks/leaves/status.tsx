@@ -10,7 +10,6 @@ const status = {
   selected: "new",
 };
 
-// const Status = ({ status }: { status: any }) => {
 const Status = ({ selected }: { selected: any }) => {
   status.selected = selected;
   return (

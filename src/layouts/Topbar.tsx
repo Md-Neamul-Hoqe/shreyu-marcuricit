@@ -251,7 +251,7 @@ const Topbar = ({
               <ProfileDropdown
                 profilePic={profilePic}
                 menuItems={ProfileMenus}
-                username={"Nik Patel"}
+                username={"Md. Neamul Hoqe"}
               />
             </li>
             <li className="dropdown notification-list">

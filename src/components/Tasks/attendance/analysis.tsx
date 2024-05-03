@@ -15,14 +15,19 @@ const Analysis = () => {
             </div>
             <div
               style={{ width: 125, height: 125 }}
-              className="p-4 mx-auto my-3 bg-primary text-white h2 text-nowrap avatar-xl rounded-circle"
+              className="d-flex align-items-center justify-content-center mx-auto my-3 bg-primary text-white h2 text-nowrap avatar-xl rounded-circle"
             >
               3 hrs
             </div>
-            <div>
-              <Button variant="primary" className="btn-sm me-1">
-                Follow
-              </Button>
+            <div className="d-flex justify-content-between">
+              <div className="text-center">
+                <div className="">Break</div>
+                <div>1.21 hrs</div>
+              </div>
+              <div className="text-center">
+                <div className="">Overtime</div>
+                <div>3 hrs</div>
+              </div>
             </div>
           </Card.Body>
         </Card>
