@@ -1,7 +1,7 @@
 import { ButtonGroup, Dropdown } from "react-bootstrap";
 import FeatherIcons from "feather-icons-react";
 
-const Actions = () => {
+const Actions = (): any => {
   return (
     <Dropdown as={ButtonGroup} className="mt-2 me-1" align="end">
       <Dropdown.Toggle variant="transparent" className="cursor-pointer">

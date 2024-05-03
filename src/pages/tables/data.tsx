@@ -33,6 +33,17 @@ interface leaveAdmin {
   action: object;
 }
 
+interface attendance {
+  morning: boolean;
+  afternoon: boolean;
+}
+
+interface AttendanceAdmin {
+  id: number;
+  employee: object;
+  attendance: attendance[];
+}
+
 interface leaveEmployee {
   id: number;
   leave_type: string;
@@ -52,6 +63,288 @@ interface ExpandableRecords {
   phone: string;
   subRows: Records[];
 }
+
+/* TODO: data>attendance need to be formate by symbol instead of boolean */
+const attendanceAdmin: AttendanceAdmin[] = [
+  {
+    id: 1,
+    employee: {
+      img: (
+        <img
+          src={cardImg}
+          alt={cardImg}
+          width={35}
+          className="rounded-circle"
+        />
+      ),
+      name: "John Doe",
+    },
+    attendance: [
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+    ],
+  },
+  {
+    id: 2,
+    employee: {
+      img: (
+        <img
+          src={cardImg}
+          alt={cardImg}
+          width={35}
+          className="rounded-circle"
+        />
+      ),
+      name: "John Doe",
+    },
+    attendance: [
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: false,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+      {
+        morning: true,
+        afternoon: true,
+      },
+    ],
+  },
+];
+
+/* column for attendanceAdmin table */
+const days = attendanceAdmin?.[0].attendance.map((day: any, idx) => ({
+  Header: ++idx + "",
+  accessor: `attendance?.[${idx - 1}]?.morning`,
+}));
 
 const listOfHolidays: Records1[] = [
   {
@@ -207,7 +500,7 @@ const leavesOfAdmin: leaveAdmin[] = [
         <img
           src={cardImg}
           alt={cardImg}
-          width={50}
+          width={35}
           className="rounded-circle"
         />
       ),
@@ -228,7 +521,7 @@ const leavesOfAdmin: leaveAdmin[] = [
         <img
           src={cardImg}
           alt={cardImg}
-          width={50}
+          width={35}
           className="rounded-circle"
         />
       ),
@@ -249,7 +542,7 @@ const leavesOfAdmin: leaveAdmin[] = [
         <img
           src={cardImg}
           alt={cardImg}
-          width={50}
+          width={35}
           className="rounded-circle"
         />
       ),
@@ -270,7 +563,7 @@ const leavesOfAdmin: leaveAdmin[] = [
         <img
           src={cardImg}
           alt={cardImg}
-          width={50}
+          width={35}
           className="rounded-circle"
         />
       ),
@@ -291,7 +584,7 @@ const leavesOfAdmin: leaveAdmin[] = [
         <img
           src={cardImg}
           alt={cardImg}
-          width={50}
+          width={35}
           className="rounded-circle"
         />
       ),
@@ -1432,4 +1725,6 @@ export {
   listOfHolidays,
   leavesOfEmployee,
   leavesOfAdmin,
+  attendanceAdmin,
+  days,
 };

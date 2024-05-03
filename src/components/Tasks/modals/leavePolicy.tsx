@@ -1,17 +1,19 @@
 import { ReactChildren } from "react";
 import { Button, Modal } from "react-bootstrap";
 
+interface LeavePolicyProps {
+  show: boolean;
+  handleClose: any;
+  title: string;
+  children: ReactChildren;
+}
+
 const LeavePolicy = ({
   show,
   handleClose,
   title,
   children,
-}: {
-  show: boolean;
-  handleClose: any;
-  title: string;
-  children: ReactChildren;
-}) => {
+}: LeavePolicyProps) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header onHide={handleClose} closeButton>

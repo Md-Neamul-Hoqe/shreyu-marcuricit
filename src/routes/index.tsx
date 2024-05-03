@@ -9,8 +9,15 @@ import PrivateRoute from "./PrivateRoute";
 // lazy load all the views
 
 // Employee Management
+// import AttendanceAdmin from "../pages/tasks/AttendanceAdmin";
 const LeavesSettingsPage = React.lazy(
   () => import("../pages/tasks/leavesSettings")
+);
+const AttendanceEmployeePage = React.lazy(
+  () => import("../pages/tasks/AttendanceEmployee")
+);
+const AttendanceAdminPage = React.lazy(
+  () => import("../pages/tasks/AttendanceAdmin")
 );
 const AdminLeavesPage = React.lazy(() => import("../pages/tasks/AdminLeaves"));
 const EmployeeLeavesPage = React.lazy(
@@ -323,6 +330,18 @@ const Employees: RoutesProps = {
       path: "/employees/leaves-settings",
       name: "Leave Settings",
       element: <LeavesSettingsPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/attendance-admin",
+      name: "Attendance Admin",
+      element: <AttendanceAdminPage />,
+      route: PrivateRoute,
+    },
+    {
+      path: "/employees/attendance-employee",
+      name: "Attendance Employee",
+      element: <AttendanceEmployeePage />,
       route: PrivateRoute,
     },
   ],
