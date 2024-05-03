@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# [Shreyu-react](https://shreyu-react-psi.vercel.app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is task on an existing project called [Shreyu-react](https://smarthr.dreamstechnologies.com/react/template/employees) in [Mercuricit]()
 
-## Available Scripts
+## Contribution
 
-In the project directory, you can run:
+My all contributions are in the directories:
+
+- `/src/components/Tasks`
+- `/src/pages/tasks`
+
+## Necessary Data
+
+- `/src/pages/tables`
 
 ### `yarn start`
 
