@@ -6,6 +6,7 @@ import cardImg from "../../assets/images/users/avatar-7.jpg";
 import Actions from "../../components/Tasks/actions";
 import Permissions from "../../components/Tasks/employee/permissions";
 import Status from "../../components/Tasks/leaves/status";
+import AttendanceTic from "../../components/Tasks/attendance/attendanceTic";
 
 interface Records {
   id: number;
@@ -36,8 +37,8 @@ interface leaveAdmin {
 }
 
 interface attendance {
-  morning: boolean;
-  afternoon: boolean;
+  morning: ReactNode;
+  afternoon: ReactNode;
 }
 
 interface AttendanceAdmin {
@@ -66,7 +67,6 @@ interface ExpandableRecords {
   subRows: Records[];
 }
 
-/* TODO: data>attendance need to be formate by symbol instead of boolean */
 const attendanceAdmin: AttendanceAdmin[] = [
   {
     id: 1,
@@ -83,124 +83,124 @@ const attendanceAdmin: AttendanceAdmin[] = [
     },
     attendance: [
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={false} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={false} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
       {
-        morning: true,
-        afternoon: true,
+        morning: <AttendanceTic attendance={true} />,
+        afternoon: <AttendanceTic attendance={true} />,
       },
     ],
   },
@@ -346,6 +346,7 @@ const attendanceAdmin: AttendanceAdmin[] = [
 const days = attendanceAdmin?.[0].attendance.map((day: any, idx) => ({
   Header: ++idx + "",
   accessor: `attendance?.[${idx - 1}]?.morning`,
+  sort: false,
 }));
 
 const listOfHolidays: Records1[] = [
