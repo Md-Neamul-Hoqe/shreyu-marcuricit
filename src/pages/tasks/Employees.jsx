@@ -2,6 +2,7 @@
 import PageTitle from "../../components/PageTitle";
 import AllEmployees from "../../components/Tasks/AllEmployee";
 import Search from "../../components/Tasks/employee/search";
+import AddEmployee from "../../components/Tasks/employee/AddEmployee";
 
 const Employees = () => {
   return (
@@ -17,6 +18,9 @@ const Employees = () => {
         ]}
         title={"Employees"}
       />
+
+      {/* Add new employee */}
+      <AddEmployee />
 
       {/* Search */}
       <Search />

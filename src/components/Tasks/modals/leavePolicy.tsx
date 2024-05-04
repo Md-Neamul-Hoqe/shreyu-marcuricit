@@ -15,7 +15,7 @@ const LeavePolicy = ({
   children,
 }: LeavePolicyProps) => {
   return (
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} size="lg">
       <Modal.Header onHide={handleClose} closeButton>
         <Modal.Title as="h5">{title}</Modal.Title>
       </Modal.Header>

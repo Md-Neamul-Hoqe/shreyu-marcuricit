@@ -1,8 +1,10 @@
 // demo images
+import { ReactNode } from "react";
 import cardImg from "../../assets/images/users/avatar-7.jpg";
 
 // components
 import Actions from "../../components/Tasks/actions";
+import Permissions from "../../components/Tasks/employee/permissions";
 import Status from "../../components/Tasks/leaves/status";
 
 interface Records {
@@ -489,6 +491,100 @@ const listOfHolidays: Records1[] = [
     day: "Thursday",
 
     action: <Actions />,
+  },
+];
+
+interface AddEmployeeInfoProps {
+  id: number;
+  module_permission: string;
+  read: ReactNode;
+  write: ReactNode;
+  create: ReactNode;
+  delete: ReactNode;
+  import: ReactNode;
+  export: ReactNode;
+}
+
+const AddEmployeeInfo: AddEmployeeInfoProps[] = [
+  {
+    id: 1,
+    module_permission: "Holiday",
+    read: <Permissions defaultChecked={true} controller={`read_${1}`} />,
+    write: <Permissions defaultChecked={false} controller={`write_${1}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${1}`} />,
+    delete: <Permissions defaultChecked={false} controller={`delete_${1}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${1}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${1}`} />,
+  },
+  {
+    id: 2,
+    module_permission: "Leaves",
+    read: <Permissions defaultChecked={true} controller={`read_${2}`} />,
+    write: <Permissions defaultChecked={true} controller={`write_${2}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${2}`} />,
+    delete: <Permissions defaultChecked={false} controller={`delete_${2}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${2}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${2}`} />,
+  },
+  {
+    id: 3,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${3}`} />,
+    write: <Permissions defaultChecked={false} controller={`write_${3}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${3}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${3}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${3}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${3}`} />,
+  },
+  {
+    id: 4,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${4}`} />,
+    write: <Permissions defaultChecked={false} controller={`write_${4}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${4}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${4}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${4}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${4}`} />,
+  },
+  {
+    id: 5,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${5}`} />,
+    write: <Permissions defaultChecked={false} controller={`write_${5}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${5}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${5}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${5}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${5}`} />,
+  },
+  {
+    id: 6,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${6}`} />,
+    write: <Permissions defaultChecked={true} controller={`write_${6}`} />,
+    create: <Permissions defaultChecked={true} controller={`create_${6}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${6}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${6}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${6}`} />,
+  },
+  {
+    id: 7,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${7}`} />,
+    write: <Permissions defaultChecked={false} controller={`write_${7}`} />,
+    create: <Permissions defaultChecked={true} controller={`create_${7}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${7}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${7}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${7}`} />,
+  },
+  {
+    id: 8,
+    module_permission: "Clients",
+    read: <Permissions defaultChecked={true} controller={`read_${8}`} />,
+    write: <Permissions defaultChecked={true} controller={`write_${8}`} />,
+    create: <Permissions defaultChecked={false} controller={`create_${8}`} />,
+    delete: <Permissions defaultChecked={true} controller={`delete_${8}`} />,
+    import: <Permissions defaultChecked={false} controller={`import_${8}`} />,
+    export: <Permissions defaultChecked={false} controller={`export_${8}`} />,
   },
 ];
 
@@ -1727,4 +1823,5 @@ export {
   leavesOfAdmin,
   attendanceAdmin,
   days,
+  AddEmployeeInfo,
 };

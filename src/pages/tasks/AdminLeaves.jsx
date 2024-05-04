@@ -2,6 +2,7 @@
 import PageTitle from "../../components/PageTitle";
 import Stats from "../../components/Tasks/leaves/stats";
 import LeaveAdmin from "../../components/Tasks/leaves/leaveAdmin";
+import Search from "../../components/Tasks/leaves/search";
 
 // Dummy data
 const AdminStat = [
@@ -44,7 +45,7 @@ const AdminLeaves = () => {
 
       <Stats stats={AdminStat} />
 
-      {/* TODO: Search section  */}
+      <Search />
 
       <LeaveAdmin />
     </>

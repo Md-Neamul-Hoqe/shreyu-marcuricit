@@ -167,7 +167,7 @@ const LeavesSettings = () => {
                 <Form>
                   <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="policyName" column md={3}>
-                      Policy Name <span className="text-red">*</span>
+                      Policy Name <span className="text-warning">*</span>
                     </Form.Label>
                     <Col md={9}>
                       <Form.Control
@@ -181,7 +181,7 @@ const LeavesSettings = () => {
 
                   <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="days" column md={3}>
-                      Days <span className="text-red">*</span>
+                      Days <span className="text-warning">*</span>
                     </Form.Label>
                     <Col md={9}>
                       <Form.Control

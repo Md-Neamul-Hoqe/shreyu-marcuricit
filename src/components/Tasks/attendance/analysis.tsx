@@ -1,4 +1,4 @@
-import { Button, Card, Col, ProgressBar, Row } from "react-bootstrap";
+import { Card, Col, ProgressBar, Row } from "react-bootstrap";
 
 const Analysis = () => {
   return (
